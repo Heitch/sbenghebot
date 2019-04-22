@@ -45,5 +45,11 @@ const Discord = require("discord.js");
 const config = require("./config.json");
 const client = new Discord.Client();
 client.login(config.token);
-
+client.on("ready", async()=>{
+  const channel = client.guilds.get("564973307703590923").channels.get("564980942511538189");
+  const onEmbed = new Discord.RichEmbed()
+      .setTitle("I am on and ready for my duties uwu")
+      .setColor("BLUE");
+  channel.send(onEmbed)
+});
 module.exports = app;
