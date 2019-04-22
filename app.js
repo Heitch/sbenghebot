@@ -50,6 +50,7 @@ client.on("ready", async () => {
     const channel = client.guilds.get("564973307703590923").channels.get("569999577793560576");
     const onEmbed = new Discord.RichEmbed()
         .setTitle("I have received new updates!")
+        .setDescription("-Updated event: ready")
         .setColor("BLUE");
     channel.send(onEmbed)
 });
