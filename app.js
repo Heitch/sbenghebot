@@ -47,7 +47,7 @@ const prefix = config.prefix;
 const client = new Discord.Client();
 client.login(config.token);
 client.on("ready", async () => {
-    const channel = client.guilds.get("564973307703590923").channels.get("564980942511538189");
+    const channel = client.guilds.get("564973307703590923").channels.get("569999577793560576");
     const onEmbed = new Discord.RichEmbed()
         .setTitle("I am on and ready for my duties uwu")
         .setColor("BLUE");
