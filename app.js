@@ -59,8 +59,14 @@ client.on("message", async message => {
     if (message.content.indexOf(config.prefix) !== 0) return;
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
-    if (command === "ping") {
-        message.channel.send("pong");
+    if (command === "about") {
+        if(args[0] === "bot"){
+            const aboutBotEmbed = new Discord.RichEmbed()
+                .setTitle("Bot info")
+                .setColor("BLUE")
+                .addField("Languages","-ejs\n-styl\n-json\nc\njs");
+            message.channel.send(aboutBotEmbed)
+        }
     }
 });
 module.exports = app;
